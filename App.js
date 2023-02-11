@@ -810,7 +810,7 @@ export default function App() {
       SetLoading(true);
       axios({
         method: 'get',
-        url: 'https://translation.googleapis.com/language/translate/v2?target='+languageCode+'&key=AIzaSyBHDp1RteH_7SgsfGWbQC9beP3S0aoaxy4&q='+text,
+        url: 'https://translation.googleapis.com/language/translate/v2?target='+languageCode+'&key=<API_KEY>&q='+text,
       }).then((response) => {
         SetResult(response.data.data.translations[0].translatedText)
         SetLoading(false);
